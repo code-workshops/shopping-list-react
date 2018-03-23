@@ -1,14 +1,20 @@
 var React = require('react');
 
-var ListHeader = React.createClass({
+class ListHeader extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {}
+    // Bindings
+      this.handleSubmit = this.handleSubmit.bind(this)
+  }
   
-  handleSubmit: function (event) {
+  handleSubmit (event) {
     event.preventDefault();
 
     this.props.removeAllListItems();
-  },
+  }
 
-  render: function () {
+  render () {
     var totalNumberOfListItems = this.props.totalNumberOfListItems;
 
     if (totalNumberOfListItems > 0) {
@@ -23,6 +29,6 @@ var ListHeader = React.createClass({
 
     return (<span>Shopping List</span>);
   }
-});
+}
 
 module.exports = ListHeader;

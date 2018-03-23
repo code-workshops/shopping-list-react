@@ -3,13 +3,22 @@ var ListItem = require('./ListItem');
 var ListHeader = require('./ListHeader');
 var EmptyList = require('./EmptyList');
 
-var List = React.createClass({
+class List extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
 
-  getListOfItemIds: function (items) {
+        // Bindings
+        this.getListOfItemIds = this.getListOfItemIds.bind(this);
+        this.getTotalNumberOfListItems = this.getTotalNumberOfListItems.bind(this);
+        this.createListItemElements = this.createListItemElements.bind(this);
+    }
+
+  getListOfItemIds (items) {
     return Object.keys(items);
-  },
+  }
 
-  getTotalNumberOfListItems: function (items) {
+  getTotalNumberOfListItems (items) {
     var totalNumberOfItems = 0;
     var item;
 
@@ -19,9 +28,9 @@ var List = React.createClass({
     });
 
     return totalNumberOfItems;
-  },
+  }
 
-  createListItemElements: function (items) {
+  createListItemElements (items) {
     var item;
 
     return (
@@ -33,9 +42,9 @@ var List = React.createClass({
       }.bind(this))
       .reverse()
     );
-  },
+  }
 
-  render: function () {
+  render () {
     var items = this.props.items;
     var listItemElements = this.createListItemElements(items);
 
@@ -54,6 +63,6 @@ var List = React.createClass({
       </div>
     );
   }
-});
+}
 
 module.exports = List;

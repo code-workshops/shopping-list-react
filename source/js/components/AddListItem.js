@@ -5,9 +5,15 @@ var styleRequired = {
   color: "#ffaaaa"
 };
 
-var AddListItem = React.createClass({
+class AddListItem extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
 
-  handleSubmitEvent: function (event) {
+        this.handleSubmitEvent = this.handleSubmitEvent.bind(this);
+    }
+
+  handleSubmitEvent (event) {
     event.preventDefault();
 
     var item = {
@@ -19,9 +25,9 @@ var AddListItem = React.createClass({
     };
 
     this.props.addListItem(item);
-  },
+  }
 
-  render: function () {
+  render () {
     return (
       <form onSubmit={this.handleSubmitEvent}>
         <h3 className="page-header">Add New Item</h3>
@@ -52,6 +58,6 @@ var AddListItem = React.createClass({
       </form>
     );
   }
-});
+}
 
 module.exports = AddListItem;

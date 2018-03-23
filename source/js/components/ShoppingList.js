@@ -2,41 +2,47 @@ var React = require('react');
 var List = require('./List');
 var AddListItem = require('./AddListItem');
 
-var ShoppingList = React.createClass({
-  
-  getInitialState: function () {
-    return {
+class ShoppingList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       list: {}
     };
-  },
 
-  updateList: function (newList) {
+    // ES6: Without binding 'this' here, it will get lost in local scope!
+    this.addListItem = this.addListItem.bind(this);
+    this.updateList = this.updateList.bind(this);
+    this.removeListItem = this.removeListItem.bind(this);
+    this.removeAllListItems = this.removeAllListItems.bind(this)
+  }
+
+  updateList(newList) {
     this.setState({
       list: newList
     });
-  },
+  }
 
-  addListItem: function (item) {
+  addListItem(item) {
     var list = this.state.list;
 
     list[item.id] = item;
 
     this.updateList(list);
-  },
+  }
 
-  removeListItem: function (itemId) {
+  removeListItem(itemId) {
     var list = this.state.list;
 
     delete list[itemId];
 
     this.updateList(list);
-  },
+  }
 
-  removeAllListItems: function () {
+  removeAllListItems() {
     this.updateList({});
-  },
+  }
 
-  render: function () {
+  render() {
     var items = this.state.list;
 
     return (
@@ -59,6 +65,6 @@ var ShoppingList = React.createClass({
       </div>
     );
   }
-});
+}
 
 module.exports = ShoppingList;

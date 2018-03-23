@@ -1,17 +1,24 @@
 var React = require('react');
 var ListItemDescription = require('./ListItemDescription');
 
-var ListItem = React.createClass({
+class ListItem extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state = {};
 
-  handleSubmit: function (event) {
+      // Bindings
+      this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  handleSubmit (event) {
     event.preventDefault();
 
     var listItemId = this.props.item.id;
 
     this.props.removeListItem(listItemId);
-  },
+  }
 
-  render: function () {
+  render () {
     var item = this.props.item;
     return (
       <div className="panel panel-primary">
@@ -29,6 +36,6 @@ var ListItem = React.createClass({
       </div>
     );
   }
-});
+}
 
 module.exports = ListItem;
