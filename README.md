@@ -1,4 +1,6 @@
 # Shopping List with React.js.
+ES5 Author: https://github.com/fedosejev/shopping-list-react.git
+ES6 Author: Kay Hudson
 
 Basic shopping list implemented with React.js (`v15`) and Twitter Bootstrap (`v3`).
 
@@ -10,10 +12,17 @@ http://fedosejev.github.io/shopping-list-react/
 
 ## Install
 
+#### NPM
+
+You can use npm with: `npm install`
+
+#### Yarn
+..or if you prefer yarn:
+
 1. `npm install -g yarn`
 2. `yarn install`
 
-#### What is Yarn?
+*What is Yarn?*
 + https://code.facebook.com/posts/1840075619545360
 + https://scotch.io/tutorials/yarn-package-manager-an-improvement-over-npm
 
@@ -26,17 +35,10 @@ http://fedosejev.github.io/shopping-list-react/
 
 `npm run build`
 
-## Other versions
-
-+ [React.js and ES2015](https://github.com/fedosejev/shopping-list-react-es2015)
-+ [React.js and Flux (ES5)](https://github.com/fedosejev/shopping-list-react-flux)
-+ [React.js, Redux and ES2015](https://github.com/fedosejev/shopping-list-react-redux)
-
 ## Author
 
-Artemij Fedosejev
-+ [Website](http://artemij.com)
-+ [LinkedIn](https://www.linkedin.com/in/artemij)
+Kay Hudson
++ [LinkedIn](https://www.linkedin.com/in/kayh25)
 + [React.Tips](http://react.tips)
 
 ## License

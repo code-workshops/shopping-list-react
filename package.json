@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fedosejev/shopping-list-react.git"
+    "url": "https://github.com/code-workshops/shopping-list-react.git"
   },
   "author": "Artemij Fedosejev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fedosejev/shopping-list-react/issues"
+    "url": "https://github.com/code-workshops/shopping-list-react/issues"
   },
-  "homepage": "https://github.com/fedosejev/shopping-list-react",
+  "homepage": "https://github.com/code-workshops/shopping-list-react",
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",

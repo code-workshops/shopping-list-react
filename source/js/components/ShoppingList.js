@@ -3,8 +3,8 @@ var List = require('./List');
 var AddListItem = require('./AddListItem');
 
 class ShoppingList extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       list: {}
     };

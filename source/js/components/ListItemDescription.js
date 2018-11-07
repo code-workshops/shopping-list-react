@@ -1,8 +1,8 @@
 var React = require('react');
 
 class ListItemDescription extends React.Component {
-  constructor(props) {
-      super(props);
+  constructor() {
+      super();
       this.state = {}
   }
 
